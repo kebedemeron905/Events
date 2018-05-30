@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bachata.urls')),
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^accounts/logout/$', auth_views.logout, name='logout'),
+    path('accounts/', include('django.contrib.auth.urls')),
     
 ]
