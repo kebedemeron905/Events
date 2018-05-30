@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Salsa in the DMV</title>
+        <link rel="stylesheet" href="{% static 'css/bachata.css' %}">
+    </head>
+    <body>
+        <h1>Salsa in the DMV</h1>
+        <nav>
+            <h1><a href="/"> Upcoming Salsa Events</a></h1>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
