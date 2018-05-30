@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .forms import EventForm
 from .models import Event
 
@@ -10,6 +11,7 @@ def event_detail(request, pk):
     event = Event.objects.get(id=pk)
     return render(request, 'bachata/event_detail.html', {'event': event})
 
+@login_required
 def event_create(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
@@ -20,6 +22,7 @@ def event_create(request):
         form = EventForm()
     return render(request, 'bachata/event_create.html', {'form': form})
 
+@login_required
 def event_edit(request, pk):
     event = Event.objects.get(pk=pk)
     if request.method == "POST":
@@ -31,7 +34,7 @@ def event_edit(request, pk):
         form = EventForm(instance=event)
     return render(request, 'bachata/event_create.html', {'form': form})
 
-
+@login_required
 def event_delete (request, pk):
     Event.objects.get(pk=pk).delete()
     return redirect('event_list')

@@ -6,9 +6,17 @@
         <link rel="stylesheet" href="{% static 'css/bachata.css' %}">
     </head>
     <body>
-        <h1 class='base-heading'>Salsa in the DMV</h1>
+        <h1 class= 'base-heading'>Salsa in the DMV</h1>
         <nav>
             <h1><a href="/"> Upcoming Salsa Events</a></h1>
+            <div class="user-info">
+                {% if user.is_authenticated %}
+                    Welcome, {{ user.username }}
+                    <a href="{% url 'logout' %}">Signout</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
         </nav>
         {% block content %}
         {% endblock %}
