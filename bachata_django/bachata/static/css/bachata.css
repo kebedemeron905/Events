@@ -1,8 +1,13 @@
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  max-width: 50em;
+  max-width: 60em;
   margin: auto;
+  margin-top: 18em;
   padding: 2em 1em;
+}
+
+.base-heading {
+  font-size: 120px;
 }
 
 nav a {
