@@ -17,6 +17,7 @@ from django.contrib.auth.decorators import login_required
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LOGIN_REDIRECT_URL = 'event_list'
+LOGOUT_REDIRECT_URL = 'event_list'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
