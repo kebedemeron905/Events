@@ -1,15 +1,20 @@
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  max-width: 60em;
-  margin: auto;
-  margin-top: 18em;
+  margin: 50px 0 0;
   padding: 2em 1em;
 }
 
 .base-heading {
-  font-size: 120px;
+  margin-top: 2em;
+  margin-left: 3em;
+  font-size: 100px;
+  color: #2a152b;
 }
 
+.salsa-word{
+  font-size: 120px;
+}
+/* 
 nav a {
   border: 1px solid black;
   margin: .5em;
@@ -40,18 +45,6 @@ li {
   margin: .25em;
 }
 
-h1 {
-  font: inherit;
-  color: inherit;
-  letter-spacing: -.05em;
-  text-decoration: none;
-  border-bottom: 1px solid black;
-}
-
-h2>a {
-  font-size: .75em;
-}
-
 input {
   display: block;
   margin: 5px 0 20px 0;
@@ -71,33 +64,9 @@ a.delete {
   color: #FFFFFF;
 }
 
-a.delete {
-  background-color: red;
-}
 
-.artist-photo {
-  width: 400px;
-}
-
-span.nationality {
-  font-size: .5em;
-}
 
 .user-info {
   float: right;
 }
-
-a.fav {
-  text-decoration: none;
-  color: red;
-}
-
-a.no-fav {
-  text-decoration: none;
-  color: black;
-}
-
-.fav:visited,
-.no-fav:visited {
-  text-decoration: none;
-}
+ */
