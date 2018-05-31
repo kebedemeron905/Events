@@ -2,16 +2,16 @@
 
 <html>
     <head>
-        <title>Salsa in the DMV</title>
+        <title>Salsa in the DMV </title> 
         <link rel="stylesheet" href="{% static 'css/bachata.css' %}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     </head>
     <body>
-        <h1 class= 'base-heading'><span class= 'salsa-word'>Salsa</span> in the DMV</h1>
+        <h1 class= 'base-heading'><a href='/'><span class='salsa-word'>Salsa</span> in the DMV</a></h1>
          <div class='salsa-image'><img src="../../static/css/latin.png" alt="salsa"></div>
         <nav>
-            <h1><a href="/"> Upcoming Salsa Events</a></h1>
+            <h1 class= 'upcoming-events-heading'><a href="/"> Upcoming Salsa Events</a></h1>
             <div class="user-info">
                 {% if user.is_authenticated %}
                     Welcome, {{ user.username }}
@@ -21,6 +21,7 @@
                     <a href="{% url 'signup' %}"><i class="fas fa-user-plus" style="font-size:20px;"></i></a>
                 {% endif %}
             </div>
+            <!-- <i class="fa fa-angle-down" style="font-size:100px; font-weight: 20px; color: olivedrab;"></i> -->
         </nav>
         {% block content %}
         {% endblock %}
