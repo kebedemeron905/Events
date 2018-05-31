@@ -33,7 +33,7 @@ SECRET_KEY = 'qj%^m%&n$_0ehkc(q6y_z18zl2qhbk*rk)v)g1v@!f6p3qky-%'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
+ ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1', 'salsaevents.herokuapp.com']
 
 
 # Application definition
