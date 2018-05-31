@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: mek835@vt.edu
+Date: Thu, 31 May 2018 00:18:18 -0000
+Message-ID: <152772589846.68218.7886824080847042060@192.168.1.3>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/accounts/password_reset/reset/MQ/4wn-6dbb6fd5e498f9d2e900/
+
+Your username, in case you've forgotten: meronkebede
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------

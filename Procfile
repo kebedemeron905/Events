@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath bachata_django bachata_django.wsgi

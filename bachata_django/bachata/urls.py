@@ -10,4 +10,5 @@ urlpatterns = [
     path('events/<int:pk>/delete', views.event_delete, name='event_delete'),
     path('accounts/signup/', views.SignUp.as_view(), name='signup'),
 
+
 ]
