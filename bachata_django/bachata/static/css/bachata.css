@@ -9,34 +9,37 @@ body {
   margin-left: 3em;
   font-size: 100px;
   font-family: fantasy;
+  text-shadow: 3px 3px rgb(113, 113, 113);
   color: #2a152b;
 }
 
 .salsa-word{
   font-size: 150px;
+  
  
 }
 
 .salsa-image{
   margin-top: -6.5em;
 }
-/* 
+
 nav a {
-  border: 1px solid black;
+  border-radius: 2px;
   margin: .5em;
   padding: .5em;
   background-color: #eeeeee;
 }
 
 nav a:hover {
-  background-color: orange;
-  color: blue;
+  background-color: rgb(170, 211, 216);
+  color: black;
 }
 
 a,
 a:visited {
+
   text-decoration: none;
-  color: blue;
+  color: black;
 }
 
 a:hover {
@@ -72,7 +75,10 @@ a.delete {
 
 
 
-.user-info {
+.user-info  {
   float: right;
+  padding: 10px;
+  margin-top: -55em;
+  margin-right: 2px;
 }
- */
+ 
