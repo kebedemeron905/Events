@@ -27,7 +27,7 @@ nav a {
   border-radius: 2px;
   margin: .5em;
   padding: .5em;
-  background-color: #eeeeee;
+
 }
 
 nav a:hover {
@@ -42,9 +42,6 @@ a:visited {
   color: black;
 }
 
-a:hover {
-  background-color: #ccc;
-}
 
 ul {
   list-style-type: none;
