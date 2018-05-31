@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import dj_database_url
 from django.contrib.auth.decorators import login_required
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,12 +30,8 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 SECRET_KEY = 'qj%^m%&n$_0ehkc(q6y_z18zl2qhbk*rk)v)g1v@!f6p3qky-%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -98,7 +95,9 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES['default'] = dj_database_url.config(default='postgres://zlnmydbdnimrci:717ec2cebd44baaaf8da30f0d3af53df388d8e9d9c9af74d68964b8f3f3d527b@ec2-54-83-59-120.compute-1.amazonaws.com:5432/d39lk9t6fmhs21')
+db_from_env = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
