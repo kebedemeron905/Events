@@ -26,10 +26,15 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'qj%^m%&n$_0ehkc(q6y_z18zl2qhbk*rk)v)g1v@!f6p3qky-%'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
 ALLOWED_HOSTS = []
 
@@ -93,9 +98,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-DATABASES['default'] = dj_database_url.config(default='postgres://zlnmydbdnimrci:717ec2cebd44baaaf8da30f0d3af53df388d8e9d9c9af74d68964b8f3f3d527b@ec2-54-83-59-120.compute-1.amazonaws.com:5432/d39lk9t6fmhs21')
-db_from_env = dj_database_url.config()
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
