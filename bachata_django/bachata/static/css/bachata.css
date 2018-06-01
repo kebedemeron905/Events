@@ -25,7 +25,7 @@ body {
 }
 
 .upcoming-events-heading{
-  font-size: 40px;
+  font-size: 50px;
   margin-left: 10px;
 }
 
@@ -171,10 +171,12 @@ padding: 10px;
 .newaccount-form{
   margin-left: 40em;
   position: sticky;
+  
 }
 
 .event-form{
-  color: grey;
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color:  palevioletred; 
 }
 
 .save-new-btn{
@@ -216,6 +218,16 @@ padding: 10px;
 
 }
 
+.shadow-box-detail{
+  box-shadow: 0px 2px 5px 0px rgba(250, 32, 32, 0.4);
+  width: 40em;
+  padding-right: 40px;
+  padding-left: 20px;
+  padding-top: 5px;
+  margin-bottom: 25px;
+
+}
+
 .event-date{
   padding-bottom: 10px;
   margin-bottom: 2px;
@@ -225,4 +237,37 @@ padding: 10px;
 .event-date-content{
   font-weight: bold;
   font-size: 23px;
+
+}
+
+.blink_me {
+  font-size: 40px;
+  color: palevioletred;
+  animation: blinker 1s linear;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.detail-container{
+  margin-left: 30em;
+  margin-top: 18em;
+  
+
+}
+
+
+.event-list{
+  padding: 10px;
+  line-height: 1.6;
+  
+}
+
+.event-attributes{
+  font-weight: bold;
+  font-size: 15px;
+  padding-right: 10px;
 }

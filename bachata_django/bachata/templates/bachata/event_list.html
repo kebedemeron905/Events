@@ -3,21 +3,22 @@
 
 
 <div class='events-container'>
-    <h3>Upcoming Events</h3>
+    <h3 class='blink_me' >Upcoming Events</h3>
    
             <ul>
                     {% for event in events %}
+                    <div class= 'pretty-scroll'>
                         <li>
                             <div class='event-date'><span class='event-date-content'>{{event.date}}</span></div>
                                     <div class='shadow-box'>
                                             <a href="{% url 'event_detail' pk=event.pk %}">{{ event.name }}</a>
                                     </div>
                         </li>
-                        
+                    </div> 
                     {% endfor %}
             </ul>
    
-        <a href="{% url 'event_create'%}"><i class="fas fa-plus-circle" style="font-size:52px; "></i></a>
+        <a href="{% url 'event_create'%}"><i class="fas fa-plus-circle" style="font-size:80px; "></i></a>
 </div>
 
 {% endblock %}

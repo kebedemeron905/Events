@@ -1,16 +1,22 @@
 
 {% extends 'bachata/base.html' %}
 {% block content %}
+<div class='detail-container'>
+                <h2>{{ event.name }} <a href="{% url 'event_edit' pk=event.pk %}"><i class="fas fa-edit" style="font-size:35px;"></i></a></h2>
+                <h4>{{event.date}}{{ event.Date }}</h4>
+                <div class='shadow-box-detail'>
+                         <h4>{{ event.time_start }}-{{event.time_end}}</h4>
+                
+                                <ul class='event-details'>
+                                        <li class= 'event-list'><span class='event-attributes'>Location:</span>{{event.location}} </li>
+                                        <li class= 'event-list'><span class='event-attributes'>Details: </span>{{event.details}} </li>
+                                        <li class= 'event-list'><span class='event-attributes'>Cost:</span>{{event.cost}} </li>
+                                        <li class= 'event-list'><a href=''><span class='event-attributes'>Event Site:</span> {{event.event_site}}</a></li>
+                                </ul>
 
-<h2>{{ event.name }} <a href="{% url 'event_edit' pk=event.pk %}">(edit)</a></h2>
-<h4>{{ event.Date }}</h4>
-<h4>{{ event.time_start }}-{{event.time_end}}</h4>
+                </div>
+                
+                <a href="{% url 'event_delete' pk=event.pk %}" class='delete-button'>Delete</a>
+</div>
 
-<ul>
-        <li>Location: {{event.location}} </li>
-        <li>Details: {{event.details}} </li>
-        <li>Cost: {{event.cost}} </li>
-        <li><a href=''>Event Site: {{event.event_site}}</a></li>
-</ul>
-<a href="{% url 'event_delete' pk=event.pk %}" class='delete-button'>Delete</a>
 {% endblock %}
