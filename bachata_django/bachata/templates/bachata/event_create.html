@@ -1,10 +1,14 @@
-
 {% extends 'bachata/base.html' %}
-{% block content %}
-    <h2>New Event</h2>
-    <form method="POST" class="event-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
-{% endblock %}
+
+        {% block content %}
+        <div class='newaccount-form'>
+            <h2>New Event</h2>
+                <form method="POST" class="event-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save-new-btn">Save</button>
+                </form>
+            {% endblock %}
+        </div>
+           
+    

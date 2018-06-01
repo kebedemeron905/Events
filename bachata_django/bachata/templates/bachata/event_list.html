@@ -1,13 +1,23 @@
 {% extends 'bachata/base.html' %}
 {% block content %}
-<h1>Upcoming Events</h1>
-<h2 class= 'add-event'><a href="{% url 'event_create'%}"> Add Event <i class="fas fa-plus-circle" style="font-size:48px; "></i></a></h2>
-<ul>
-    {% for event in events %}
-        <li>
-            <a href="{% url 'event_detail' pk=event.pk %}">{{ event.name }}</a>
-            {{event.date}}
-        </li>
-    {% endfor %}
-</ul>
+
+
+<div class='events-container'>
+    <h3>Upcoming Events</h3>
+   
+            <ul>
+                    {% for event in events %}
+                        <li>
+                            <div class='event-date'><span class='event-date-content'>{{event.date}}</span></div>
+                                    <div class='shadow-box'>
+                                            <a href="{% url 'event_detail' pk=event.pk %}">{{ event.name }}</a>
+                                    </div>
+                        </li>
+                        
+                    {% endfor %}
+            </ul>
+   
+        <a href="{% url 'event_create'%}"><i class="fas fa-plus-circle" style="font-size:52px; "></i></a>
+</div>
+
 {% endblock %}

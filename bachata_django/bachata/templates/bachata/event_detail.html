@@ -7,10 +7,10 @@
 <h4>{{ event.time_start }}-{{event.time_end}}</h4>
 
 <ul>
-        <li>{{event.location}} </li>
-        <li>{{event.details}} </li>
-        <li>{{event.cost}} </li>
-        <li><a href=''>{{event.event_site}}</a></li>
+        <li>Location: {{event.location}} </li>
+        <li>Details: {{event.details}} </li>
+        <li>Cost: {{event.cost}} </li>
+        <li><a href=''>Event Site: {{event.event_site}}</a></li>
 </ul>
-<a href="{% url 'event_delete' pk=event.pk %}">Delete</a>
+<a href="{% url 'event_delete' pk=event.pk %}" class='delete-button'>Delete</a>
 {% endblock %}
