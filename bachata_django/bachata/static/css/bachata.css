@@ -2,7 +2,6 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: auto;
   
-  
 }
 
 .base-heading {
@@ -97,12 +96,30 @@ a.delete {
  margin-top: -1.5em;
  
 }
+.signup-header{
+  position: absolute;
+  margin-top: -8em;
+  margin-left: 6em;
+  font-size: 30px;
+
+}
 
 .signup-container{
 
-  top: 13em;
-  right: 19em;
+  top: 23.5em;
+  right: 38.5em;
   position: absolute;
+}
+
+.signup-button{
+padding: 10px;
+ font-size: 16px;
+ border-radius:3px;
+}
+
+.signup-button:hover{
+  color: black;
+  background-color: rgb(191, 238, 191);
 }
 
 .login-form {
@@ -113,8 +130,10 @@ a.delete {
 }
 
 .login-word{
+  position: absolute;
   font-size: 30px;
   margin-top: -1em;
+  margin-left: -14em;
 }
 
 .login-button{
@@ -131,4 +150,8 @@ a.delete {
 .forgot-password{
   display: block;
   margin-top: 1em;
+}
+
+.forgot-password:hover{
+  color: red;
 }

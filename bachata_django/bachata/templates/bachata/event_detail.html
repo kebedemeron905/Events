@@ -1,6 +1,7 @@
-{% extends 'bachata/base.html' %}
 
+{% extends 'bachata/base.html' %}
 {% block content %}
+
 <h2>{{ event.name }} <a href="{% url 'event_edit' pk=event.pk %}">(edit)</a></h2>
 <h4>{{ event.Date }}</h4>
 <h4>{{ event.time_start }}-{{event.time_end}}</h4>

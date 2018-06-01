@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 
+
 from django.contrib.auth import login, authenticate
 from .forms import EventForm
 from .models import Event
@@ -12,7 +13,9 @@ from .models import Event
 def event_list(request):
     events = Event.objects.all()
     return render(request, 'bachata/event_list.html', {'events': events})
-    
+
+
+
 @login_required
 def event_detail(request, pk):
     event = Event.objects.get(id=pk)
