@@ -8,10 +8,12 @@ from django.contrib.auth import login, authenticate
 from .forms import EventForm
 from .models import Event
 
+@login_required
 def event_list(request):
     events = Event.objects.all()
     return render(request, 'bachata/event_list.html', {'events': events})
-
+    
+@login_required
 def event_detail(request, pk):
     event = Event.objects.get(id=pk)
     return render(request, 'bachata/event_detail.html', {'event': event})

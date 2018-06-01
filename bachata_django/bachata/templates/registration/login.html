@@ -1,10 +1,12 @@
 {% extends 'bachata/base.html' %}
 
 {% block content %}
-<h2> Login</h2>
+<div class='login-form'>
+<h2 class='login-word'> Login</h2>
 <form method="post" class='login-form'>
   {% csrf_token %} {{ form.as_p }}
-  <button type='submit'>Login</button>
-  <a href="{% url 'password_reset' %}">Forgot Password</a>
+  <button class='login-button' type='submit'><span >Login</span></button>
+  <a  class= 'forgot-password' href="{% url 'password_reset' %}">Forgot Password?</a>
 </form>
+</div>
 {% endblock %}
